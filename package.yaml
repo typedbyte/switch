@@ -1,0 +1,58 @@
+name:        switch
+version:     0.1.0.0
+github:      "typedbyte/switch"
+license:     BSD3
+author:      "Michael Szvetits"
+maintainer:  "typedbyte@qualified.name"
+copyright:   "2021 Michael Szvetits"
+synopsis:    Nintendo Switch Controller Library
+category:    Game
+description: Please see the README on GitHub at <https://github.com/typedbyte/switch#readme>
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+dependencies:
+- attoparsec >= 0.13.2.0  && < 0.14.0.0
+- base       >= 4.7       && < 5
+- bytestring >= 0.10.12.0 && < 0.12.0.0
+- hidapi     >= 0.1.6     && < 0.2.0
+
+library:
+  source-dirs: src
+  exposed-modules:
+  - Device.Nintendo.Switch
+
+tests:
+  leftJoyCon:
+    source-dirs:
+    - test/Common
+    - test/LeftJoyCon
+    main: Main.hs
+    dependencies:
+    - switch
+  rightJoyCon:
+    source-dirs:
+    - test/Common
+    - test/RightJoyCon
+    main: Main.hs
+    dependencies:
+    - switch
+  proController:
+    source-dirs:
+    - test/Common
+    - test/ProController
+    main: Main.hs
+    dependencies:
+    - switch
+  cube:
+    source-dirs: test/Cube
+    main: Main.hs
+    dependencies:
+    - GPipe
+    - GPipe-GLFW
+    - linear
+    - switch
+
+ghc-options: -Wall

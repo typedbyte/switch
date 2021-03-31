@@ -1,0 +1,11 @@
+resolver: lts-17.2
+
+packages:
+- .
+
+extra-deps:
+- GPipe-2.2.5
+- GPipe-GLFW-1.4.1.4
+- hidapi-0.1.6
+
+allow-newer: true

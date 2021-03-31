@@ -1,0 +1,122 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 81d011fda80ad7d42c19e742590057585396cb1e966349ccd658968fdb1d1631
+
+name:           switch
+version:        0.1.0.0
+synopsis:       Nintendo Switch Controller Library
+description:    Please see the README on GitHub at <https://github.com/typedbyte/switch#readme>
+category:       Game
+homepage:       https://github.com/typedbyte/switch#readme
+bug-reports:    https://github.com/typedbyte/switch/issues
+author:         Michael Szvetits
+maintainer:     typedbyte@qualified.name
+copyright:      2021 Michael Szvetits
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/typedbyte/switch
+
+library
+  exposed-modules:
+      Device.Nintendo.Switch
+  other-modules:
+      Device.Nintendo.Switch.Connection
+      Device.Nintendo.Switch.Controller
+      Device.Nintendo.Switch.Input
+      Device.Nintendo.Switch.Output
+      Device.Nintendo.Switch.Utils
+      Paths_switch
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      attoparsec >=0.13.2.0 && <0.14.0.0
+    , base >=4.7 && <5
+    , bytestring >=0.10.12.0 && <0.12.0.0
+    , hidapi >=0.1.6 && <0.2.0
+  default-language: Haskell2010
+
+test-suite cube
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Madgwick
+      Paths_switch
+  hs-source-dirs:
+      test/Cube
+  ghc-options: -Wall
+  build-depends:
+      GPipe
+    , GPipe-GLFW
+    , attoparsec >=0.13.2.0 && <0.14.0.0
+    , base >=4.7 && <5
+    , bytestring >=0.10.12.0 && <0.12.0.0
+    , hidapi >=0.1.6 && <0.2.0
+    , linear
+    , switch
+  default-language: Haskell2010
+
+test-suite leftJoyCon
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      ControllerTest
+      Paths_switch
+  hs-source-dirs:
+      test/Common
+      test/LeftJoyCon
+  ghc-options: -Wall
+  build-depends:
+      attoparsec >=0.13.2.0 && <0.14.0.0
+    , base >=4.7 && <5
+    , bytestring >=0.10.12.0 && <0.12.0.0
+    , hidapi >=0.1.6 && <0.2.0
+    , switch
+  default-language: Haskell2010
+
+test-suite proController
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      ControllerTest
+      Paths_switch
+  hs-source-dirs:
+      test/Common
+      test/ProController
+  ghc-options: -Wall
+  build-depends:
+      attoparsec >=0.13.2.0 && <0.14.0.0
+    , base >=4.7 && <5
+    , bytestring >=0.10.12.0 && <0.12.0.0
+    , hidapi >=0.1.6 && <0.2.0
+    , switch
+  default-language: Haskell2010
+
+test-suite rightJoyCon
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      ControllerTest
+      Paths_switch
+  hs-source-dirs:
+      test/Common
+      test/RightJoyCon
+  ghc-options: -Wall
+  build-depends:
+      attoparsec >=0.13.2.0 && <0.14.0.0
+    , base >=4.7 && <5
+    , bytestring >=0.10.12.0 && <0.12.0.0
+    , hidapi >=0.1.6 && <0.2.0
+    , switch
+  default-language: Haskell2010
