@@ -6,6 +6,6 @@ packages:
 extra-deps:
 - GPipe-2.2.5
 - GPipe-GLFW-1.4.1.4
-- hidapi-0.1.6
+- hidapi-0.1.7
 
 allow-newer: true
