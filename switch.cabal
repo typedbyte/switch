@@ -1,10 +1,8 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.3.
 --
 -- see: https://github.com/sol/hpack
---
--- hash: 81d011fda80ad7d42c19e742590057585396cb1e966349ccd658968fdb1d1631
 
 name:           switch
 version:        0.1.0.0
@@ -44,7 +42,7 @@ library
       attoparsec >=0.13.2.0 && <0.14.0.0
     , base >=4.7 && <5
     , bytestring >=0.10.12.0 && <0.12.0.0
-    , hidapi >=0.1.6 && <0.2.0
+    , hidapi >=0.1.7 && <0.2.0
   default-language: Haskell2010
 
 test-suite cube
@@ -62,7 +60,7 @@ test-suite cube
     , attoparsec >=0.13.2.0 && <0.14.0.0
     , base >=4.7 && <5
     , bytestring >=0.10.12.0 && <0.12.0.0
-    , hidapi >=0.1.6 && <0.2.0
+    , hidapi >=0.1.7 && <0.2.0
     , linear
     , switch
   default-language: Haskell2010
@@ -81,7 +79,7 @@ test-suite leftJoyCon
       attoparsec >=0.13.2.0 && <0.14.0.0
     , base >=4.7 && <5
     , bytestring >=0.10.12.0 && <0.12.0.0
-    , hidapi >=0.1.6 && <0.2.0
+    , hidapi >=0.1.7 && <0.2.0
     , switch
   default-language: Haskell2010
 
@@ -99,7 +97,7 @@ test-suite proController
       attoparsec >=0.13.2.0 && <0.14.0.0
     , base >=4.7 && <5
     , bytestring >=0.10.12.0 && <0.12.0.0
-    , hidapi >=0.1.6 && <0.2.0
+    , hidapi >=0.1.7 && <0.2.0
     , switch
   default-language: Haskell2010
 
@@ -117,6 +115,6 @@ test-suite rightJoyCon
       attoparsec >=0.13.2.0 && <0.14.0.0
     , base >=4.7 && <5
     , bytestring >=0.10.12.0 && <0.12.0.0
-    , hidapi >=0.1.6 && <0.2.0
+    , hidapi >=0.1.7 && <0.2.0
     , switch
   default-language: Haskell2010
