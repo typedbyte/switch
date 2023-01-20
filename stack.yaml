@@ -1,4 +1,4 @@
-resolver: lts-18.16
+resolver: nightly-2023-01-18
 
 packages:
 - .
